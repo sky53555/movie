@@ -1,0 +1,294 @@
+/* reset */
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 250vh;
+  overflow-x: hidden;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* table */
+
+.table {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* left */
+.left {
+  width: 20%;
+  background-color: white;
+  position: relative;
+}
+.left > img {
+  width: 70%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 3rem;
+}
+
+/* category */
+.category {
+  margin-top: 12rem;
+}
+.category > li {
+  padding: 1rem 0;
+  text-align: left;
+  font-size: 30px;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  padding-left: 3rem;
+}
+.category > li:hover {
+  background-color: black;
+  color: white;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.category .sub {
+  margin-top: 2rem;
+  margin-left: 3rem;
+  display: none;
+}
+.category > li:hover .sub {
+  display: block;
+}
+.category .sub > li {
+  padding: 10px 0px;
+  font-size: 20px;
+  display: flex;
+}
+.category .sub .bar {
+  transition: 0.5s;
+  display: none;
+  margin-right: 0.5rem;
+}
+.category .sub > li:hover .bar {
+  display: block;
+}
+
+.left > p {
+  position: absolute;
+  left: 50%;
+  bottom: 2rem;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0;
+}
+/* right */
+.right {
+  width: 80%;
+  margin: 0 auto;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+}
+
+.search {
+  width: 300px;
+  height: 30px;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 3rem;
+  right: 5rem;
+}
+.searchTex {
+  width: 200px;
+  line-height: 30px;
+  padding: 0px;
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  font-size: 16px;
+}
+.searchBtn {
+  width: 40px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  float: right;
+  border-radius: 50%;
+  background: white;
+  border: none;
+  font-size: 16px;
+  align-items: center;
+  cursor: pointer;
+}
+/* swiper */
+.swiper-container {
+  width: 60%;
+  height: 27%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15rem;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  height: 100%;
+  color: #000;
+  /* 	transform: scale(0.8); */
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  transition: 0.3s all;
+  box-shadow: 0 0 20px #00000036;
+  border-radius: 10px;
+}
+
+.swiper-slide-active {
+  transition: 0.3s all;
+  opacity: 1;
+  background-color: orange;
+}
+
+.swiper-slide h2,
+.swiper-slide p {
+  color: #fff;
+  position: absolute;
+}
+.swiper-slide h2 {
+  bottom: 4rem;
+  left: 1.5rem;
+}
+.swiper-slide p {
+  bottom: 2rem;
+  left: 1.5rem;
+}
+
+.right > section > h2 {
+  font-size: 40px;
+  margin: 2rem 0;
+  color: #fff;
+}
+section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+#section1 {
+  width: 85%;
+  margin: 8rem auto;
+  position: relative;
+}
+.imgWrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.korea,
+.global {
+  height: 350px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  margin: 0 auto;
+  gap: 1.5rem;
+  border: 1px solid red;
+}
+.korea > li,
+.global > li {
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.korea > li:hover img,
+.global > li:hover img {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.korea > li .textWrap,
+.global > li .textWrap {
+  position: absolute;
+  bottom: -6rem;
+  color: #fff;
+  width: 90%;
+}
+
+.textTop {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.textTop span {
+  display: inline-block;
+}
+.topIcon {
+  justify-self: end;
+  color: red;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.textDown {
+  margin-top: 1rem;
+}
+.textDown i {
+  margin-right: 0.5rem;
+  color: yellow;
+}
+.btns {
+  font-size: 2rem;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  top: 55%;
+  position: absolute;
+  width: 105%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.btns i {
+  background: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#section2 {
+  width: 85%;
+  margin: 13rem auto;
+  position: relative;
+}

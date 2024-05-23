@@ -16,6 +16,10 @@
       .movie p {
         margin: 5px 0;
       }
+      .movie img {
+        max-width: 200px;
+        height: auto;
+      }
       #search-form {
         margin-bottom: 20px;
       }
@@ -24,25 +28,27 @@
   <body>
     <h1>Movie Search</h1>
     <div id="search-form">
-      <input type="text" id="search-query" placeholder="Enter movie title" />
-      <button onclick="searchMovies()">Search</button>
+      <input
+        type="text"
+        id="search-query"
+        placeholder="영화 제목을 입력하세요"
+      />
+      <button onclick="searchMovies()">검색</button>
     </div>
     <div id="tmdb-movie" class="movie"></div>
     <div id="omdb-movie" class="movie"></div>
 
     <script>
-      const tmdbApiKey =
-        "4878766355602e5dba7fc00d12fb5646your_actual_tmdb_api_key";
+      const tmdbApiKey = "4878766355602e5dba7fc00d12fb5646";
 
       function searchMovies() {
         const query = document.getElementById("search-query").value;
         if (query) {
-          searchTmdbMovie(query);
-          searchOmdbMovie(query);
+          search(query);
         }
       }
 
-      function searchTmdbMovie(query) {
+      function search(query) {
         const tmdbSearchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbApiKey}&query=${encodeURIComponent(
           query
         )}`;
@@ -53,10 +59,15 @@
             if (data.results && data.results.length > 0) {
               const movie = data.results[0];
               const tmdbMovieDiv = document.getElementById("tmdb-movie");
+              const posterUrl = movie.poster_path
+                ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+                : "No poster available";
               tmdbMovieDiv.innerHTML = `
               <h2>${movie.title}</h2>
-              <p>Release Date: ${movie.release_date}</p>
-              <p>Overview: ${movie.overview}</p>
+              <img src="${posterUrl}" alt="${movie.title} Poster">
+              <p>개봉일: ${movie.release_date}</p>
+              <p>설명 : ${movie.overview}</p>
+              <p>평점: ${movie.vote_average}</p>
             `;
             } else {
               document.getElementById("tmdb-movie").innerHTML =
@@ -65,31 +76,8 @@
           })
           .catch((error) => {
             console.error("Error:", error);
-          });
-      }
-
-      function searchOmdbMovie(query) {
-        const omdbSearchUrl = `http://www.omdbapi.com/?t=${encodeURIComponent(
-          query
-        )}&apikey=${omdbApiKey}`;
-
-        fetch(omdbSearchUrl)
-          .then((response) => response.json())
-          .then((data) => {
-            if (data.Response === "True") {
-              const omdbMovieDiv = document.getElementById("omdb-movie");
-              omdbMovieDiv.innerHTML = `
-              <h2>${data.Title}</h2>
-              <p>Release Date: ${data.Released}</p>
-              <p>Plot: ${data.Plot}</p>
-            `;
-            } else {
-              document.getElementById("omdb-movie").innerHTML =
-                "<p>No results found on OMDb.</p>";
-            }
-          })
-          .catch((error) => {
-            console.error("Error:", error);
+            document.getElementById("tmdb-movie").innerHTML =
+              "<p>Error fetching data from TMDb.</p>";
           });
       }
     </script>

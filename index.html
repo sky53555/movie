@@ -38,18 +38,15 @@
         <p>@Team Project</p>
       </li>
     </div>
-    <div class="right">
-      <form class="search" action="" method="get">
-        <input
-          class="searchTex"
-          type="text"
-          placeholder="영화를 입력하세요."
-        />
-        <button class="searchBtn" type="submit">
+    <div class="right">g
+      <form id="search" class="search" action="" method="get">
+        <input id="search-query" class="searchTex" type="text" placeholder="영화를 입력하세요." />
+        <button id="search-button" class="searchBtn" type="submit">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
-
+      <div id="tmdb-movie"></div>
+      
 
         <div class="swiper-container">
           <div class="swiper-wrapper">
@@ -137,6 +134,8 @@
           slideShadows: false,
         },
       });
+      
     </script>
+<script src="ex2.js"></script>
   </body>
 </html>

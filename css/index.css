@@ -41,6 +41,23 @@ a {
   transform: translateX(-50%);
   padding-top: 3rem;
 }
+h2,
+p {
+  color: white;
+}
+#tmdb-movie {background-color: ur;
+  margin: 0px auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#tmdb-movie img {
+  max-width: 100%;
+}
 
 /* category */
 .category {

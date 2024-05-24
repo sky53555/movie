@@ -48,10 +48,7 @@ async function displayMovies(type) {
   });
 }
 
-displayMovies("korea");
-displayMovies("global");
-
-// 인덱스 인기차트
+// 인기차트를 표시하는 함수
 function showMovies(movies, startIndex) {
   movies.forEach((movie, index) => {
     if (index >= startIndex && index < startIndex + 4) {
@@ -62,31 +59,38 @@ function showMovies(movies, startIndex) {
   });
 }
 
+// 처음에 한국 영화와 해외 영화를 표시
+displayMovies("korea");
+displayMovies("global");
 showMovies(koreaMovies, startIndex);
 showMovies(globalMovies, startIndex2);
 
-nextBtn.addEventListener("click", function () {
-  startIndex += 4; // 다음 4개의 한국 영화를 보여줌
-  showMovies(koreaMovies, startIndex);
-});
+function nextSlide(btn, movies, startIndex) {
+  btn.addEventListener("click", function () {
+    startIndex += 4;
+    showMovies(movies, startIndex);
 
-prevBtn.addEventListener("click", function () {
-  startIndex -= 4; // 이전 4개의 한국 영화를 보여줌
-  if (startIndex < 0) {
-    startIndex = 0; // 음수가 되지 않도록 보정
-  }
-  showMovies(koreaMovies, startIndex);
-});
+    // 다시 첫 번째 영화부터 보이도록 설정
+    if (startIndex >= movies.length) {
+      startIndex = 0;
+      showMovies(movies, startIndex);
+    }
+  });
+}
 
-nextBtn2.addEventListener("click", function () {
-  startIndex2 += 4; // 다음 4개의 해외 영화를 보여줌
-  showMovies(globalMovies, startIndex2);
-});
+// 이전 슬라이드로 이동하는 함수
+function prevSlide(btn, movies, startIndex) {
+  btn.addEventListener("click", function () {
+    startIndex -= 4;
+    if (startIndex < 0) {
+      startIndex = 0;
+    }
+    showMovies(movies, startIndex);
+  });
+}
 
-prevBtn2.addEventListener("click", function () {
-  startIndex2 -= 4; // 이전 4개의 해외 영화를 보여줌
-  if (startIndex2 < 0) {
-    startIndex2 = 0; // 음수가 되지 않도록 보정
-  }
-  showMovies(globalMovies, startIndex2);
-});
+// 한국 영화와 해외 영화에 대한 이전과 다음 버튼에 대한 이벤트 추가
+nextSlide(nextBtn, koreaMovies, startIndex);
+prevSlide(prevBtn, koreaMovies, startIndex);
+nextSlide(nextBtn2, globalMovies, startIndex2);
+prevSlide(prevBtn2, globalMovies, startIndex2);

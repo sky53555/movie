@@ -1,85 +1,192 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link href="css/index.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/sub.css">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <div class="table">
-      <div class="left">
-        <img class="logo" src="img/캡처.JPG" />
-        <ul class="category">
-          <li>
-            <p>최신작</p>
-          </li>
-          <li>
-            <p>장르</p>
-            <ul class="sub">
-              <li><span class="bar">-</span> 스릴러</li>
-              <li><span class="bar">-</span> 액션</li>
-              <li><span class="bar">-</span> 로맨스</li>
-              <li><span class="bar">-</span> 드라마</li>
-            </ul>
-          </li>
-        </ul>
-        <p>@Team Project</p>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="css/headerstyle.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/substyle.css">
+  <!-- 구글폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended+Text&display=swap" rel="stylesheet">
+  <!-- 폰트어썸 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <h1>Dive in</h1>
+    <ul class="menu">
+      <li>
+        <span><i class="fa-solid fa-video"></i></span>
+        <a href="">최신 영화</a>
       </li>
-    </div>
-    <div class="right">
-      <form class="search" action="" method="get">
-        <input
-          class="searchTex"
-          type="text"
-          placeholder="영화를 입력하세요."
-        />
-        <button class="searchBtn" type="submit">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-      </form>
+      <li>
+        <span><i class="fa-solid fa-folder-open"></i></span>
+        <a href="">장르</a>
 
-      <section id="subSection1">
-        <h2 id="genre">액션</h2>
-        <ul class="movies">
-          <li>      
-            <div class="imgWrap">
-            <img src="./img/back.PNG" alt="" id="moviePoster">
-          </div>
-            <div class="textWrap">
-              <div class="textTop">
-                <h2 id="movieName">고질라 어쩌고</h2>
-                <span class="topIcon"><i class="fa-regular fa-heart"></i></span>
-                <div class="textDown">
-                  <p><i class="fa-solid fa-star"></i><span id="rating">4.5</span></p>
-                </div>
-              </div>
-            </div>
-        </li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+        <ul class="genre">
+          <li><a href="">로맨스</a> </li>
+          <li><a href="">공포·스릴러</a> </li>
+          <li><a href="">판타지</a> </li>
+          <li><a href="">드라마</a> </li>
         </ul>
-        <div class="center">
-         <button class="more">view more</button>
+      </li>
+      <li>
+        <span><i class="fa-solid fa-barcode"></i></span>
+        <a href="">PICK ME</a>
+      </li>
+    </ul>
+    <div>
+      <p>【Team Project】</p>
+      <p>Lee Ji-hyang</p>
+      <p>Yun juyoung</p>
+      <p>Lee Hyunhwa</p>
+      <p>Oh Jeongyeon</p>
+    </div>
+  </header>
+
+
+
+  <div class="right">
+    <form class="search" action="" method="get">
+      <input class="searchTex" type="text" placeholder="영화를 입력하세요." />
+      <button class="searchBtn" type="submit">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
+  </div>
+
+  <section id="subSection1">
+    <h2 id="genre">로맨스</h2>
+    <ul class="movies">
+      <li>
+        <div class="imgWrap">
+          <img src="./img/back.PNG" alt="" id="moviePoster">
         </div>
-      </section>
+        <div class="textWrap">
+          <div class="textTop">
+            <h2 id="movieName">고질라 어쩌고</h2>
+            <span class="topIcon"><i class="fa-regular fa-heart"></i></span>
+            <div class="textDown">
+              <p><i class="fa-solid fa-star"></i><span id="rating">4.5</span></p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="imgWrap">
+          <img src="./img/back.PNG" alt="" id="moviePoster">
+        </div>
+        <div class="textWrap">
+          <div class="textTop">
+            <h2 id="movieName">고질라 어쩌고</h2>
+            <span class="topIcon"><i class="fa-regular fa-heart"></i></span>
+            <div class="textDown">
+              <p><i class="fa-solid fa-star"></i><span id="rating">4.5</span></p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="imgWrap">
+          <img src="./img/back.PNG" alt="" id="moviePoster">
+        </div>
+        <div class="textWrap">
+          <div class="textTop">
+            <h2 id="movieName">고질라 어쩌고</h2>
+            <span class="topIcon"><i class="fa-regular fa-heart"></i></span>
+            <div class="textDown">
+              <p><i class="fa-solid fa-star"></i><span id="rating">4.5</span></p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="imgWrap">
+          <img src="./img/back.PNG" alt="" id="moviePoster">
+        </div>
+        <div class="textWrap">
+          <div class="textTop">
+            <h2 id="movieName">고질라 어쩌고</h2>
+            <span class="topIcon"><i class="fa-regular fa-heart"></i></span>
+            <div class="textDown">
+              <p><i class="fa-solid fa-star"></i><span id="rating">4.5</span></p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="imgWrap">
+          <img src="./img/back.PNG" alt="" id="moviePoster">
+        </div>
+        <div class="textWrap">
+          <div class="textTop">
+            <h2 id="movieName">고질라 어쩌고</h2>
+            <span class="topIcon"><i class="fa-regular fa-heart"></i></span>
+            <div class="textDown">
+              <p><i class="fa-solid fa-star"></i><span id="rating">4.5</span></p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="imgWrap">
+          <img src="./img/back.PNG" alt="" id="moviePoster">
+        </div>
+        <div class="textWrap">
+          <div class="textTop">
+            <h2 id="movieName">고질라 어쩌고</h2>
+            <span class="topIcon"><i class="fa-regular fa-heart"></i></span>
+            <div class="textDown">
+              <p><i class="fa-solid fa-star"></i><span id="rating">4.5</span></p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="imgWrap">
+          <img src="./img/back.PNG" alt="" id="moviePoster">
+        </div>
+        <div class="textWrap">
+          <div class="textTop">
+            <h2 id="movieName">고질라 어쩌고</h2>
+            <span class="topIcon"><i class="fa-regular fa-heart"></i></span>
+            <div class="textDown">
+              <p><i class="fa-solid fa-star"></i><span id="rating">4.5</span></p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="imgWrap">
+          <img src="./img/back.PNG" alt="" id="moviePoster">
+        </div>
+        <div class="textWrap">
+          <div class="textTop">
+            <h2 id="movieName">고질라 어쩌고</h2>
+            <span class="topIcon"><i class="fa-regular fa-heart"></i></span>
+            <div class="textDown">
+              <p><i class="fa-solid fa-star"></i><span id="rating">4.5</span></p>
+            </div>
+          </div>
+        </div>
+      </li>
 
+    </ul>
+    <div class="center">
+      <button class="more">view more</button>
     </div>
-    </div>
+  </section>
 
 
-  </body>
+  </div>
+
+  <script src="js/subcustom.js"></script>
+</body>
+
 </html>

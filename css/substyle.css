@@ -1,6 +1,10 @@
 /***************************
 sub
 ****************************/
+body {
+  background: #838282;
+}
+
 section img {
   width: 100%;
   height: 100%;
@@ -8,15 +12,19 @@ section img {
   border-radius: 10px;
   transition: 0.5s;
 }
+
 #subSection1 {
   width: 85%;
-  margin: 8rem auto;
+  margin: 2rem auto;
   position: relative;
+  /* background: red; */
 }
+
 #genre {
   text-align: center;
   padding: 3rem 0;
 }
+
 .movies {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -24,7 +32,8 @@ section img {
   margin: 0 auto;
   gap: 1.5rem;
 }
-.movies > li {
+
+.movies>li {
   height: 350px;
   background-color: gray;
   border-radius: 10px;
@@ -33,20 +42,25 @@ section img {
   justify-content: center;
   align-items: center;
   width: 100%;
+  overflow: hidden;
 }
-.movies > li:hover img {
+
+.movies>li:hover img {
   transform: scale(1.2);
   cursor: pointer;
 }
-.movies > li .textWrap {
+
+.movies>li .textWrap {
   position: absolute;
   bottom: -6rem;
   color: #fff;
   width: 90%;
 }
-.movies > li {
+
+.movies>li {
   margin-bottom: 9rem;
 }
+
 .textTop {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -57,25 +71,30 @@ section img {
 .textTop span {
   display: inline-block;
 }
+
 .topIcon {
   justify-self: end;
   color: red;
   font-size: 1.5rem;
   cursor: pointer;
 }
+
 .textDown {
   margin-top: 1rem;
 }
+
 .textDown i {
   margin-right: 0.5rem;
   color: yellow;
 }
+
 .center {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .more {
   background-color: transparent;
   border: 1px solid #fff;
@@ -89,6 +108,7 @@ section img {
   height: 4.5rem;
   transition: 0.5s;
 }
+
 .more:hover {
   background-color: #fff;
   color: #000;
@@ -101,12 +121,14 @@ detail
   width: 100%;
   margin: 15rem 0;
 }
+
 .conTop {
   position: relative;
   width: 100%;
   height: 70vh;
   background: url(../img/back.PNG) center/cover no-repeat;
 }
+
 .conTop::before {
   content: "";
   position: absolute;
@@ -115,8 +137,10 @@ detail
   width: 100%;
   height: 100%;
   background: url(../img/back.PNG) center/cover no-repeat;
-  filter: blur(8px); /* 원하는 블러 정도 설정 */
+  filter: blur(8px);
+  /* 원하는 블러 정도 설정 */
 }
+
 .conTop .videoWrap {
   display: flex;
   justify-content: center;
@@ -124,31 +148,38 @@ detail
   height: 70vh;
   position: relative;
 }
+
 .conBot {
   width: 80%;
   margin: 0 auto;
   color: #fff;
 }
-.conBot > * {
+
+.conBot>* {
   margin-bottom: 2rem;
 }
+
 .conBot ul {
   display: flex;
   gap: 2rem;
   font-size: 1.5rem;
 }
+
 .sub {
   font-size: 3rem;
   margin-top: 4rem;
 }
+
 .conBot p {
   font-size: 1.5rem;
 }
+
 #introduction {
   display: block;
   font-weight: normal;
   color: red;
 }
+
 .flexWrap {
   display: flex;
   width: 100%;
@@ -157,6 +188,7 @@ detail
   height: 40vh;
   gap: 2rem;
 }
+
 .trailer {
   width: 50%;
   background-color: azure;

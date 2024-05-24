@@ -313,6 +313,7 @@ section img {
   text-align: center;
   padding: 3rem 0;
 }
+<<<<<<< HEAD
 #subSection1 p {
   color: #fff;
   font-size: 1.5rem;
@@ -324,6 +325,8 @@ section img {
   font-size: 1.5rem;
   text-align: right;
 }
+=======
+>>>>>>> db89b20ec76d9ae5067ab77240f50e18e4f86fd9
 .movies {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -351,12 +354,15 @@ section img {
   color: #fff;
   width: 90%;
 }
+<<<<<<< HEAD
 #movieName {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   max-width: 200px; /* 적절한 너비로 설정 */
 }
+=======
+>>>>>>> db89b20ec76d9ae5067ab77240f50e18e4f86fd9
 .movies > li {
   margin-bottom: 9rem;
 }
@@ -378,7 +384,10 @@ section img {
 }
 .textDown {
   margin-top: 1rem;
+<<<<<<< HEAD
   justify-self: start;
+=======
+>>>>>>> db89b20ec76d9ae5067ab77240f50e18e4f86fd9
 }
 .textDown i {
   margin-right: 0.5rem;
@@ -402,7 +411,10 @@ section img {
   width: 13rem;
   height: 4.5rem;
   transition: 0.5s;
+<<<<<<< HEAD
   margin-top: 3rem;
+=======
+>>>>>>> db89b20ec76d9ae5067ab77240f50e18e4f86fd9
 }
 .more:hover {
   background-color: #fff;

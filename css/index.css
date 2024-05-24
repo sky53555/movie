@@ -208,18 +208,24 @@ section img {
   overflow: hidden;
   border-radius: 10px;
 }
+.over {
+  height: 440px;
+  padding: 10px;
+  overflow-x: hidden;
+}
 .korea,
 .global {
+  width: 200%;
   height: 350px;
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
   margin: 0 auto;
   gap: 1.5rem;
-  border: 1px solid red;
 }
 .korea > li,
 .global > li {
+  width: 100%;
   height: 100%;
   background-color: gray;
   border-radius: 10px;
@@ -286,6 +292,10 @@ section img {
   justify-content: center;
   align-items: center;
 }
+button {
+  border: none;
+  background: none;
+}
 
 #section2 {
   width: 85%;
@@ -312,14 +322,15 @@ section img {
   gap: 1.5rem;
 }
 .movies > li {
+  width: 22%;
   height: 350px;
+  margin-right: 2%;
   background-color: gray;
   border-radius: 10px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 .movies > li:hover img {
   transform: scale(1.2);
@@ -330,9 +341,6 @@ section img {
   bottom: -6rem;
   color: #fff;
   width: 90%;
-}
-.movies > li {
-  margin-bottom: 9rem;
 }
 .textTop {
   display: grid;

@@ -93,7 +93,11 @@ section img {
   background-color: #fff;
   color: #000;
 }
-
+#subSection1 p {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+}
 /***************************
 detail
 ****************************/

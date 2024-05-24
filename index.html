@@ -20,7 +20,7 @@
   <body>
     <div class="table">
       <div class="left">
-        <img class="logo" src="img/캡처.JPG" />
+        <a href="index.html"><img class="logo" src="img/캡처.JPG" /></a>
         <ul class="category">
           <li>
             <p>최신작</p>
@@ -50,17 +50,26 @@
         </button>
       </form>
 
+      <section id="subSection1">
+      </section>
 
         <div class="swiper-container">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <h2>혹성탈출</h2>
-              <p>세상의 주인이 바뀌다.</p>
+              <h2></h2>
             </div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div>
-            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">
+              <h2></h2>
+            </div>
+            <div class="swiper-slide">    
+               <h2></h2>
+            </div>
+            <div class="swiper-slide">     
+              <h2></h2>
+            </div>
+            <div class="swiper-slide">     
+              <h2></h2>
+            </div>
           </div>
         </div>
 
@@ -120,10 +129,10 @@
       var swiper = new Swiper(".swiper-container", {
         slidesPerView: 1,
         loop: true,
-        autoplay: {
-    delay: 4000, // 오토 슬라이드 딜레이 설정 (ms)
-    disableOnInteraction: false, // 유저 상호작용시 오토 슬라이드를 일시 정지하지 않음
-  },
+  //       autoplay: {
+  //   delay: 4000, // 오토 슬라이드 딜레이 설정 (ms)
+  //   disableOnInteraction: false, // 유저 상호작용시 오토 슬라이드를 일시 정지하지 않음
+  // },
   speed: 1000, // 슬라이드 전환 속도 설정 (ms)
         effect: "coverflow",
         grabCursor: true,
@@ -136,7 +145,11 @@
           modifier: 1,
           slideShadows: false,
         },
+        initialSlide: 0, // 초기 슬라이드 위치를 첫 번째 슬라이드로 설정
       });
+
+ 
     </script>
+    <script src="js/index2_copy2.js"></script>
   </body>
 </html>

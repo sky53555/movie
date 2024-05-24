@@ -216,17 +216,10 @@ section img {
   justify-content: center;
   margin: 0 auto;
   gap: 1.5rem;
-<<<<<<< HEAD
   border: 1px solid red;
 }
 .korea > li,
 .global > li {
-  width: 100%;
-=======
-}
-.korea > li,
-.global > li {
->>>>>>> f3ac3b7ab7824a4173cc1759099e623225d9f4eb
   height: 100%;
   background-color: gray;
   border-radius: 10px;
@@ -234,10 +227,7 @@ section img {
   display: flex;
   justify-content: center;
   align-items: center;
-<<<<<<< HEAD
-=======
   width: 100%;
->>>>>>> f3ac3b7ab7824a4173cc1759099e623225d9f4eb
 }
 .korea > li:hover img,
 .global > li:hover img {

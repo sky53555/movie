@@ -1,0 +1,201 @@
+/* reset */
+@charset "utf-8";
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 250vh;
+  overflow-x: hidden;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* table */
+
+.table {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* left */
+.left {
+  width: 12%;
+  background: #302e2e;
+  position: relative;
+  color: white;
+}
+.left h1 {
+  font-family: "Libre Barcode 39 Extended Text", system-ui;
+  font-size: 67px;
+  font-weight: normal;
+  color: white;
+}
+
+/* category */
+.category {
+  margin-top: 2rem;
+}
+.category > li {
+  width: 70%;
+  margin: 0px auto;
+  padding: 1rem 0;
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 3rem;
+}
+.category > li:hover {
+  border-radius: 15px;
+  background: #fff;
+  font-weight: bold;
+  color: black;
+}
+.category .sub {
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+  display: none;
+  transition: 0.5s ease;
+}
+
+.category > li:hover .sub {
+  display: block;
+}
+.category .sub > li {
+  padding: 10px 0px;
+  font-size: 20px;
+  display: flex;
+  color: black;
+}
+.category .sub .bar {
+  transition: 0.5s;
+  margin-right: 0.5rem;
+  color: gray;
+}
+.category .sub > li:hover .bar {
+  color: black;
+}
+/* footer */
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 1rem;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+.footer p {
+  text-align: center;
+}
+.footer li {
+  margin: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+/* right */
+.right {
+  width: 88%;
+  margin: 0 auto;
+  background-image: linear-gradient(to right, black, rgb(93, 88, 88));
+  position: relative;
+  overflow: hidden;
+}
+.right i {
+  color: white;
+}
+.search {
+  width: 300px;
+  height: 30px;
+  background: none;
+  padding: 10px;
+  position: absolute;
+  top: 3rem;
+  right: 5rem;
+  border-bottom: 2px solid white;
+}
+.searchTex {
+  width: 200px;
+  line-height: 30px;
+  padding: 0px;
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  font-size: 16px;
+  color: white;
+}
+.searchBtn {
+  width: 40px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  float: right;
+  background: none;
+  border: none;
+  font-size: 16px;
+  align-items: center;
+  cursor: pointer;
+}
+button {
+  border: none;
+  background: none;
+}
+/* section */
+#section {
+  width: 80%;
+  margin: 0px auto;
+  padding: 48px;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  border: 1px solid red;
+}
+/* section1 */
+section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+#section1 {
+  width: 100%;
+  /* margin: 8rem auto; */
+  /* position: relative; */
+  border: 1px solid red;
+}
+.pick {
+  display: flex;
+}
+.imgWrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.textTop {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.textTop span {
+  display: inline-block;
+}
+.textDown {
+  margin-top: 1rem;
+}
+.textDown i {
+  margin-right: 0.5rem;
+  color: yellow;
+}

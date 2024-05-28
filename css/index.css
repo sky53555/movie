@@ -30,41 +30,44 @@ a {
 
 /* left */
 .left {
-  width: 20%;
-  background-color: white;
+  width: 12%;
+  background: #302e2e;
   position: relative;
+  color: white;
 }
-.left > img {
-  width: 70%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  padding-top: 3rem;
+.left h1 {
+  font-family: "Libre Barcode 39 Extended Text", system-ui;
+  font-size: 67px;
+  font-weight: normal;
+  color: white;
 }
 
 /* category */
 .category {
-  margin-top: 12rem;
+  margin-top: 2rem;
 }
 .category > li {
+  width: 70%;
+  margin: 0px auto;
   padding: 1rem 0;
   text-align: left;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
-  border-bottom: 1px solid black;
   padding-left: 3rem;
 }
 .category > li:hover {
-  background-color: black;
-  color: white;
-  transition: 0.5s ease;
-  cursor: pointer;
+  border-radius: 15px;
+  background: #fff;
+  font-weight: bold;
+  color: black;
 }
 .category .sub {
-  margin-top: 2rem;
-  margin-left: 3rem;
+  margin-top: 1rem;
+  margin-left: 1.5rem;
   display: none;
+  transition: 0.5s ease;
 }
+
 .category > li:hover .sub {
   display: block;
 }
@@ -72,42 +75,53 @@ a {
   padding: 10px 0px;
   font-size: 20px;
   display: flex;
+  color: black;
 }
 .category .sub .bar {
   transition: 0.5s;
-  display: none;
   margin-right: 0.5rem;
+  color: gray;
 }
 .category .sub > li:hover .bar {
-  display: block;
+  color: black;
 }
-
-.left > p {
+/* footer */
+.footer {
+  width: 100%;
   position: absolute;
-  left: 50%;
-  bottom: 2rem;
-  transform: translateX(-50%);
+  bottom: 1rem;
   margin: 0;
   padding: 0;
+  font-weight: bold;
+}
+.footer p {
+  text-align: center;
+}
+.footer li {
+  margin: 5px;
+  display: flex;
+  justify-content: space-around;
 }
 /* right */
 .right {
-  width: 80%;
+  width: 88%;
   margin: 0 auto;
-  background-color: black;
+  background-image: linear-gradient(to right, black, rgb(93, 88, 88));
   position: relative;
   overflow: hidden;
 }
-
+.right i {
+  color: white;
+}
 .search {
   width: 300px;
   height: 30px;
-  background: white;
-  border-radius: 10px;
+  background: none;
   padding: 10px;
   position: absolute;
   top: 3rem;
   right: 5rem;
+  border-bottom: 2px solid white;
 }
 .searchTex {
   width: 200px;
@@ -118,6 +132,7 @@ a {
   outline: none;
   float: left;
   font-size: 16px;
+  color: white;
 }
 .searchBtn {
   width: 40px;
@@ -125,8 +140,7 @@ a {
   display: flex;
   justify-content: center;
   float: right;
-  border-radius: 50%;
-  background: white;
+  background: none;
   border: none;
   font-size: 16px;
   align-items: center;
@@ -255,12 +269,6 @@ section img {
 .textTop span {
   display: inline-block;
 }
-.topIcon {
-  justify-self: end;
-  color: red;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
 .textDown {
   margin-top: 1rem;
 }
@@ -287,6 +295,7 @@ section img {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: black;
 }
 button {
   border: none;
@@ -350,9 +359,12 @@ button {
 }
 .topIcon {
   justify-self: end;
-  color: red;
+  color: white;
   font-size: 1.5rem;
   cursor: pointer;
+}
+.topIcon.clicked i {
+  color: red;
 }
 .textDown {
   margin-top: 1rem;
@@ -383,4 +395,37 @@ button {
 .more:hover {
   background-color: #fff;
   color: #000;
+}
+/* 찜 */
+#wishlist {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  padding: 20px;
+  display: none;
+}
+#wishlist h2 {
+  margin-top: 0;
+}
+#wishlist ul {
+  list-style: none;
+  padding: 0;
+}
+#wishlist li {
+  margin-bottom: 10px;
+}
+#wishlistToggle {
+  position: fixed;
+  top: 10px;
+  right: 310px;
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
 }

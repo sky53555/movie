@@ -1,0 +1,86 @@
+@font-face {
+    font-family: "GmarketSansMedium";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "GmarketSansMedium";
+    font-weight: 300;
+    background-color: #333;
+    overflow-x: hidden;
+}
+
+/* header */
+.hd {
+    background: rgba(141, 138, 138, 0.5);
+}
+
+.headfooter {
+    text-align: right !important;
+    line-height: 20px;
+}
+
+.headfooter>p {
+    text-align: left;
+}
+
+/* section */
+#bigBox {
+    width: 80%;
+    /* margin: 0px auto; */
+    margin-left: 280px;
+}
+
+#Container1 {
+    width: 100%;
+    height: 80vh;
+}
+
+/* bigimgbox */
+.bigImgBox {
+    background: rgb(117, 34, 34);
+}
+
+/* swiper */
+.swiper-container {
+    width: 600px;
+    height: 600px;
+    margin: 100px auto;
+    border-radius: 20px;
+    /* overflow: hidden; */
+}
+
+.swiper-slide {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+/* container2 */
+#Container2 h2 {
+    color: #fff;
+}
+
+#koreaMovie li {
+    width: 350px;
+    height: 400px;
+    background: red;
+    margin-top: 50px;
+}
+
+.imgWrap {
+    position: relative;
+}
+
+.love {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.imgWrap img {
+    background:
+}
